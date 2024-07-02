@@ -2,25 +2,60 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>A-Frame House and Trees</title>
+    <title>A-Frame Forest with Rain</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-plane rotation="-90 0 0" width="30" height="30" color="#7BC8A4"></a-plane>
+      <a-sky color="#87CEEB"></a-sky>
 
-      <a-box position="0 0.5 0" depth="4" height="2" width="4" color="#FFC65D"></a-box>
-      <a-box position="0 1.5 0" depth="4" height="1" width="4" color="#7BC8A4"></a-box>
-      <a-cone position="0 2 0" radius-bottom="2.5" radius-top="0" height="1" color="#AA0000"></a-cone>
+      <a-plane rotation="-90 0 0" width="30" height="30" color="#7BC8A4"></a-plane>
 
       <a-cylinder position="-4 0.75 -4" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
       <a-sphere position="-4 2 -4" radius="1" color="#228B22"></a-sphere>
+
       <a-cylinder position="4 0.75 -4" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
       <a-sphere position="4 2 -4" radius="1" color="#228B22"></a-sphere>
+
       <a-cylinder position="4 0.75 4" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
       <a-sphere position="4 2 4" radius="1" color="#228B22"></a-sphere>
 
-      <a-camera position="0 1.6 5"></a-camera>
+      <a-cylinder position="-4 0.75 4" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-4 2 4" radius="1" color="#228B22"></a-sphere>
+
+      <a-cylinder position="2 0.75 2" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="2 2 2" radius="1" color="#228B22"></a-sphere>
+
+      <a-cylinder position="-2 0.75 -2" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-2 2 -2" radius="1" color="#228B22"></a-sphere>
+
+      <a-cylinder position="-6 0.75 -2" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-6 2 -2" radius="1" color="#228B22"></a-sphere>
+
+      <a-cylinder position="6 0.75 2" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="6 2 2" radius="1" color="#228B22"></a-sphere>
+
+      <a-cylinder position="6 0.75 -6" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="6 2 -6" radius="1" color="#228B22"></a-sphere>
+
+      <a-cylinder position="-6 0.75 6" radius="0.25" height="1.5" color="#8B4513"></a-cylinder>
+      <a-sphere position="-6 2 6" radius="1" color="#228B22"></a-sphere>
+
+      <a-entity id="rain" position="0 10 0">
+        <a-sphere color="#1E90FF" radius="0.05" position="0 0 0" animation="property: position; to: 0 -10 0; dur: 2000; loop: true"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="1 0 -1" animation="property: position; to: 1 -10 -1; dur: 2000; loop: true; delay: 100"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="-1 0 1" animation="property: position; to: -1 -10 1; dur: 2000; loop: true; delay: 200"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="2 0 -2" animation="property: position; to: 2 -10 -2; dur: 2000; loop: true; delay: 300"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="-2 0 2" animation="property: position; to: -2 -10 2; dur: 2000; loop: true; delay: 400"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="3 0 -3" animation="property: position; to: 3 -10 -3; dur: 2000; loop: true; delay: 500"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="-3 0 3" animation="property: position; to: -3 -10 3; dur: 2000; loop: true; delay: 600"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="4 0 -4" animation="property: position; to: 4 -10 -4; dur: 2000; loop: true; delay: 700"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="-4 0 4" animation="property: position; to: -4 -10 4; dur: 2000; loop: true; delay: 800"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="5 0 -5" animation="property: position; to: 5 -10 -5; dur: 2000; loop: true; delay: 900"></a-sphere>
+        <a-sphere color="#1E90FF" radius="0.05" position="-5 0 5" animation="property: position; to: -5 -10 5; dur: 2000; loop: true; delay: 1000"></a-sphere>
+      </a-entity>
+
+      <a-camera position="0 1.6 15"></a-camera>
     </a-scene>
   </body>
 </html>
